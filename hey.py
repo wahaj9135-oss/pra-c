@@ -1,11 +1,14 @@
-class student:
-    def student(self, name):
+class family:
+    def __init__(self, caste):
+        self.caste = caste
+
+class wahaj(family):
+    def __init__(self, name, age, family_caste):
         self.name = name
-        return self.name
-class student1(student):
-    def __init__(self, name, age):
-        super().student(name)
         self.age = age
-    def display(self):
-        print("Student Name:", self.name)
-        print("Age:", self.age)
+        super().__init__(family_caste)
+
+f = wahaj("wahaj", 18, "syed")
+print(f.name)
+print(f.age)
+print(f.caste)  
